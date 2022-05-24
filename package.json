@@ -1,6 +1,6 @@
 {
 	"name": "react-flus",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "This is react state management component library for bi-direction global state management",
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
