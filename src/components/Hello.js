@@ -23,8 +23,14 @@ const listItems = [
 		id: 4,
 		name: "Email",
 		value: "pascalobi83@gmail.com"
+	},
+	{
+		id: 5,
+		name: "Contact",
+		value: "09125256272"
 	}
 ]
+
 export default function Hello() {
 	const { app } = useFlusStores()
 	const dispatcher = useFlusDispatcher()
