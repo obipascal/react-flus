@@ -32,7 +32,7 @@ const listItems = [
 ]
 
 export default function Hello() {
-	const { app } = useFlusStores()
+	const { app, myDynamicList } = useFlusStores()
 	const dispatcher = useFlusDispatcher()
 
 	const changeAppName = () => {
@@ -50,6 +50,25 @@ export default function Hello() {
 			<br />
 			<button classsName="btn btn-lg btn-primary" onClick={changeAppName} type="button">
 				Change App name to: "Flus SM Name Updated"
+			</button>
+			<br />
+			<br />
+			<br />
+			{typeof myDynamicList !== "undefined" && Array.isArray(myDynamicList) && (
+				<>
+					<ul>
+						{myDynamicList?.map(item => (
+							<li key={item?.id}>
+								<strong>{item?.name}</strong>: {item?.value}
+							</li>
+						))}
+					</ul>
+				</>
+			)}
+			<br />
+			<br />
+			<button classsName="btn btn-lg btn-primary" onClick={createDynamicList} type="button">
+				Create a Dynamic List
 			</button>
 		</div>
 	)
