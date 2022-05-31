@@ -2,8 +2,8 @@
 	"name": "react-flus",
 	"version": "1.0.2",
 	"description": "A flux state managment parttern with react. Simple and easy to user library for your projects.",
-	"main": "index.es.js",
-	"module": "index.js",
+	"main": "index.es.min.js",
+	"module": "index.cjs.js",
 	"exports": {
 		".": {
 			"require": "./index.cjs.min.js",
