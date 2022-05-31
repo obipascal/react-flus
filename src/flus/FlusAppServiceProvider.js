@@ -11,7 +11,7 @@ export const FlusActionDispatcher = React.createContext()
 const queryClient = new QueryClient()
 
 /** Flus app service provider that bootstrap the app global state */
-export default function FlusAppServiceProvider({ stores = {}, actions = {}, children }) {
+export const FlusAppServiceProvider = ({ stores = {}, actions = {}, children }) => {
 	/**
 	 * Global state management logic for the whole application using react reducer
 	 */

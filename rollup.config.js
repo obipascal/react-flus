@@ -9,11 +9,11 @@ export default [
 		input: "./src/index.js",
 		output: [
 			{
-				file: "dist/index.js",
+				file: "index.cjs.min.js",
 				format: "cjs"
 			},
 			{
-				file: "dist/index.es.js",
+				file: "index.es.min.js",
 				format: "es",
 				exports: "named"
 			}

@@ -1,14 +1,30 @@
 {
 	"name": "react-flus",
 	"version": "1.0.1",
-	"description": "This is react state management component library for bi-direction global state management",
-	"main": "dist/index.js",
-	"module": "dist/index.es.js",
+	"description": "A flux state managment parttern with react. Simple and easy to user library for your projects.",
+	"main": "index.es.js",
+	"module": "index.js",
+	"exports": {
+		".": {
+			"require": "./index.cjs.min.js",
+			"import": "./index.es.min.js"
+		},
+		"./Flus-es": "./index.es.min.js",
+		"./Flus-cjs": "./index.cjs.min.js",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"index.cjs.min.js",
+		"index.es.min.js",
+		"README.md",
+		"src/",
+		"jsconfig.json"
+	],
 	"scripts": {
 		"test": "test",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
-		"build-lib": "rollup -c"
+		"build": "rollup -c"
 	},
 	"repository": {
 		"type": "git",
@@ -49,6 +65,7 @@
 	},
 	"peerDependencies": {
 		"react": "^18.1.0",
-		"react-dom": "^18.1.0"
+		"react-dom": "^18.1.0",
+		"react-query": "^3.39.0"
 	}
 }
